@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CineApp</string>
+    <string name="login">Login</string>
+    <string name="ranking">Ranking</string>
+    <string name="catalogo">Catálogo</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="busca">Busca</string>
+    <string name="espera">Lista de Espera</string>
+    <string name="sugestao">Em destaque</string>
+    <string name="perfil">Perfil</string>
+</resources>
