@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_cine_app_vertical_cinza_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".View.SplashActivity"
+        <activity
+            android:name=".View.DetalhesScrollingActivity"
+            android:label="@string/title_activity_detalhes_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".View.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -19,10 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.HomeActivity" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".View.HomeActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".View.LoginActivity" />
-
-
     </application>
 
 </manifest>

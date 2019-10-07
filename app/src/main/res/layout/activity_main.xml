@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.HomeActivity"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorBackground">
 
 
     <ImageView
         android:id="@+id/imageViewVectorPerfil"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="18dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,35 +50,35 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewRoundCornerBackdrop"
         app:tabIndicatorColor="@color/colorAccent"
         app:tabSelectedTextColor="@color/colorAccent"
-        app:tabTextColor="@color/colorPrimaryText" >
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/catalogo" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sugestao" />
+        app:tabTextColor="@color/colorPrimaryText"
+        app:tabIconTint="@color/colorAccent">
 
     </com.google.android.material.tabs.TabLayout>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewConteudo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-        android:background="@color/colorBackground"/>
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"/>
 
-    <FrameLayout
-        android:id="@+id/simpleFrameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+
+    <include layout="@layout/content_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/colorAccentDark"
+        android:tint="@color/colorPrimaryText"
+        android:tooltipText="@string/busca"
+        app:layout_constraintBottom_toBottomOf="@id/pager"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_vector_search"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
